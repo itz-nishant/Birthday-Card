@@ -1,35 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Happy Birthday!</title>
-  
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTM0YzkcCaxYoFBMAP3OtvLymdWo43VRovV367iaX6M1venUY4L43I3ep_xd5U6JZeRts&usqp=CAU">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        .title {
+            font-family: 'Pacifico', cursive;
+        }
+        .para {
+            font-family: cursive;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <title>Birthday Card</title>
 </head>
-
 <body>
- <h2>Click this card</h2>
-<div class="body">
- <div class="birthdayCard">
-<div class="cardFront"><h3 class="happy">HAPPY BIRTHDAY</h3>
-<div class="balloons">
-  <div class="balloonOne"></div>
-  <div class="balloonTwo"></div>
-  <div class="balloonThree"></div>
-  <div class="balloonFour"></div>
-</div>
-</div>
-<div class="cardInside">
-    <h3 class="back">HAPPY BIRTHDAY</h3>
-    <p>Dear Nitish,</p> 
-    <p>Wish You a very very Happy Birthday to you</p>  
-    <p class="name">Your Friend</p>
-  </div>
-</div>
-</div
-  <script src="main.js"></script>
+    <div class="birthday-card" id="birthdayCard">
+        <div class="cover-inner">
+            <img src="https://drive.google.com/uc?export=view&id=1NJUxusAsGHbSSlYoUrSO50kSvm5TFb6u" width="100%">
+        </div>
+    
+        <div class="cover-outer">
+            <img src="https://1.bp.blogspot.com/-Mgj9-rbs65E/XfMoPSD5gtI/AAAAAAAAURk/NBokE2gSS2cTSJ2em5lZ5hJDuTtRN7UVwCLcBGAsYHQ/s1600/2713997.png" width="100%">
+        </div>
+    
+        <div class="text">
+            <p class="title">
+                HAPPY BIRTHDAY! <br> KHUSHI❤️
+            </p>
+            <p class="para">
+                I hope your special day will bring you lots of happiness,
+                love, and fun.
+                You deserve them a lot. Enjoy!
+            </p>
+            <p class="para">Hope your day goes great!</p>
+        </div>
+    </div>
+
+    <audio id="birthdaySong" src="https://wishesplus.com/wp-content/uploads/2021/02/Best-Happy-Birthday-To-You-Happy-Birthday-Songs-Remix-2021-WishesPlus.com_.mp3"></audio>
+    
+    <script>        
+        const birthdayCard = document.getElementById('birthdayCard'); 
+        const birthdaySong = document.getElementById('birthdaySong');
+      
+        birthdayCard.addEventListener('mouseenter', () => {
+          birthdaySong.currentTime = 0;
+          birthdaySong.play();
+        });
+      
+        birthdayCard.addEventListener('mouseleave', () => {
+          birthdaySong.pause();
+        });
+    </script>  
 </body>
 </html>
